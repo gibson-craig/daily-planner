@@ -44,8 +44,6 @@ $(document).ready(function(){
                 $(".time-block")[i].classList.add("future");
 
             }
-
-            }
         }
 
 
@@ -54,13 +52,17 @@ $(document).ready(function(){
     }
 
 
-    hourUpdate();
+    hourUpdate()
 
     let inteveral = setInterval(hourUpdate, 15000);
 
-    $("hour-9 .description").val(localStorage.getItem("hour-9"))
+    $("#hour-9 .description").val(localStorage.getItem("hour-9"));
+    $("#hour-10 .description").val(localStorage.getItem("hour-9"));
+    $("#hour-11 .description").val(localStorage.getItem("hour-9"));
+    $("#hour-12 .description").val(localStorage.getItem("hour-9"));
 
-    $("#currentDay").text(moment().format("dddd,MM, Do"))
+
+    $("#currentDay").text(moment().format("dddd,MM, Do"));
 
 
 })
